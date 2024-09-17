@@ -840,3 +840,82 @@
 // console.log(names);
 
 // ================================================================================================================================================================================
+
+// const pizzaPalace = {
+//     pizzas: ["Supercheese", "Smoked", "Four meats"],
+//     checkPizza(pizzaName) {
+//       return this.pizzas.includes(pizzaName);
+//     },
+//     order(pizzaName) {
+//       const isPizzaAvailable = this.checkPizza(pizzaName);
+  
+//       if (!isPizzaAvailable) {
+//         return `Sorry, there is no pizza named «${pizzaName}»`;
+//       }
+  
+//       return `Order accepted, preparing «${pizzaName}» pizza`;
+//     },
+// };
+
+// console.log(pizzaPalace.order("Smoked"));
+// console.log(pizzaPalace.order("Four meats"));
+// console.log(pizzaPalace.order("Big Mike"));
+// console.log(pizzaPalace.order("Viennese"));
+
+// ================================================================================================================================================================================
+
+// const parent = {
+//     name: "Stacey",
+//     surname: "Moore",
+//     age: 54,
+//     heritage: "Irish",
+// };
+  
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+  
+// console.log(parent.hasOwnProperty("surname"));
+// console.log(parent.hasOwnProperty("heritage"));
+// console.log(child.hasOwnProperty("name"));
+// console.log(child.name);
+// console.log(child.hasOwnProperty("age"));
+// console.log(child.age);
+// console.log(child.hasOwnProperty("surname"));
+// console.log(child.surname);
+// console.log(child.hasOwnProperty("heritage"));
+// console.log(child.heritage);
+// console.log(parent.isPrototypeOf(child));
+
+// ================================================================================================================================================================================
+
+const ancestor = {
+    name: "Paul",
+    age: 83,
+    surname: "Dawson",
+    heritage: "Irish",
+};
+  
+const parent = Object.create(ancestor);
+parent.name = "Stacey";
+parent.surname = "Moore";
+parent.age = 54;
+  
+const child = Object.create(parent);
+child.name = "Jason";
+child.age = 27;
+
+console.log(ancestor.isPrototypeOf("parent"));
+console.log(parent.isPrototypeOf("child"));
+console.log(ancestor.hasOwnProperty("surname"));
+console.log(ancestor.surname);
+console.log(parent.hasOwnProperty("surname"));
+console.log(parent.surname);
+console.log(child.hasOwnProperty("surname"));
+console.log(child.surname);
+console.log(ancestor.hasOwnProperty("heritage"));
+console.log(ancestor.heritage);
+console.log(parent.hasOwnProperty("heritage"));
+console.log(parent.heritage);
+console.log(child.hasOwnProperty("heritage"));
+console.log(child.heritage);
