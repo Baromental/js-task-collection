@@ -889,33 +889,417 @@
 
 // ================================================================================================================================================================================
 
-const ancestor = {
-    name: "Paul",
-    age: 83,
-    surname: "Dawson",
-    heritage: "Irish",
-};
+// const ancestor = {
+//     name: "Paul",
+//     age: 83,
+//     surname: "Dawson",
+//     heritage: "Irish",
+// };
   
-const parent = Object.create(ancestor);
-parent.name = "Stacey";
-parent.surname = "Moore";
-parent.age = 54;
+// const parent = Object.create(ancestor);
+// parent.name = "Stacey";
+// parent.surname = "Moore";
+// parent.age = 54;
   
-const child = Object.create(parent);
-child.name = "Jason";
-child.age = 27;
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
 
-console.log(ancestor.isPrototypeOf("parent"));
-console.log(parent.isPrototypeOf("child"));
-console.log(ancestor.hasOwnProperty("surname"));
-console.log(ancestor.surname);
-console.log(parent.hasOwnProperty("surname"));
-console.log(parent.surname);
-console.log(child.hasOwnProperty("surname"));
-console.log(child.surname);
-console.log(ancestor.hasOwnProperty("heritage"));
-console.log(ancestor.heritage);
-console.log(parent.hasOwnProperty("heritage"));
-console.log(parent.heritage);
-console.log(child.hasOwnProperty("heritage"));
-console.log(child.heritage);
+// console.log(ancestor.isPrototypeOf("parent"));
+// console.log(parent.isPrototypeOf("child"));
+// console.log(ancestor.hasOwnProperty("surname"));
+// console.log(ancestor.surname);
+// console.log(parent.hasOwnProperty("surname"));
+// console.log(parent.surname);
+// console.log(child.hasOwnProperty("surname"));
+// console.log(child.surname);
+// console.log(ancestor.hasOwnProperty("heritage"));
+// console.log(ancestor.heritage);
+// console.log(parent.hasOwnProperty("heritage"));
+// console.log(parent.heritage);
+// console.log(child.hasOwnProperty("heritage"));
+// console.log(child.heritage);
+
+// ================================================================================================================================================================================
+
+// class Car{
+//     constructor(brand, model, price){
+//         this.brand = brand;
+//         this.model = model;
+//         this.price = price;
+//     }
+// }
+
+// const brz = new Car("SUBARU", "BRZ", 35000);
+// console.log(brz);
+
+// const gt = new Car("TOYOTA", "GT-86", 33000);
+// console.log(gt);
+
+// const frs = new Car("SCION", "FR-S", 17000);
+// console.log(frs);
+
+// ================================================================================================================================================================================
+
+// class Car{
+//     constructor(params){
+//         this.brand = params.brand;
+//         this.model = params.model;
+//         this.price = params.price;
+//     }
+// }
+
+// const brz = new Car({
+//     brand: "SUBARU", 
+//     model: "BRZ", 
+//     price: 35000
+// });
+// console.log(brz);
+
+// const gt = new Car({
+//     brand: "TOYOTA", 
+//     model: "GT-86", 
+//     price: 33000
+// });
+// console.log(gt);
+
+// const frs = new Car({
+//     brand: "SCION", 
+//     model: "FR-S", 
+//     price: 17000
+// });
+// console.log(frs);
+
+// ================================================================================================================================================================================
+
+// class Car{
+//     constructor(params){
+//         this.brand = params.brand;
+//         this.model = params.model;
+//         this.price = params.price;
+//     }
+
+//     getPrice() {
+//         return this.price;
+//     }
+
+//     changePrice(newPrice){
+//         this.price = newPrice;
+//     }
+// }
+
+// const brz = new Car({
+//     brand: "SUBARU", 
+//     model: "BRZ", 
+//     price: 35000
+// });
+// console.log(brz);
+// brz.getPrice();
+// brz.changePrice(38000);
+// console.log(brz);
+
+// const gt = new Car({
+//     brand: "TOYOTA", 
+//     model: "GT-86", 
+//     price: 33000
+// });
+// console.log(gt);
+
+// const frs = new Car({
+//     brand: "SCION", 
+//     model: "FR-S", 
+//     price: 17000
+// });
+// console.log(frs);
+
+// ================================================================================================================================================================================
+
+// class Car{
+//     #brand;
+//     model;
+//     price;
+
+//     constructor(params){
+//         this.#brand = params.brand;
+//         this.model = params.model;
+//         this.price = params.price;
+//     }
+
+//     getBrand(){
+//         return this.#brand;
+//     }
+
+//     changeBrand(newBrand){
+//         this.#brand = newBrand;
+//     }
+
+//     getPrice() {
+//         return this.price;
+//     }
+
+//     changePrice(newPrice){
+//         this.price = newPrice;
+//     }
+// }
+
+// const brz = new Car({
+//     brand: "SUBARU", 
+//     model: "BRZ", 
+//     price: 35000
+// });
+
+// console.log(brz);
+// console.log(brz.getPrice());
+// brz.changePrice(38000);
+// console.log(brz);
+// console.log(brz.getBrand());
+// brz.changeBrand("SUBAWU");
+// console.log(brz);
+
+// const gt = new Car({
+//     brand: "TOYOTA", 
+//     model: "GT-86", 
+//     price: 33000
+// });
+// console.log(gt);
+
+// const frs = new Car({
+//     brand: "SCION", 
+//     model: "FR-S", 
+//     price: 17000
+// });
+// console.log(frs);
+
+// ================================================================================================================================================================================
+
+// class Car {
+//     #brand;
+//     #model;
+//     #price;
+    
+//     constructor(params) {
+//       this.#brand = params.brand;
+//       this.#model = params.model;
+//       this.#price = params.price;
+//     }
+  
+//     get brand() {
+//       return this.#brand;
+//     }
+  
+//     set brand(newBrand) {
+//       this.#brand = newBrand;
+//     }
+  
+//     get model() {
+//       return this.#model;
+//     }
+  
+//     set model(newModel) {
+//       this.#model = newModel;
+//     }
+  
+//     get price() {
+//       return this.#price;
+//     }
+  
+//     set price(newPrice) {
+//       this.#price = newPrice;
+//     }
+// }
+
+// const brz = new Car({
+//     brand: "SUBARU", 
+//     model: "BRZ", 
+//     price: 35000
+// });
+
+
+// const gt = new Car({
+//     brand: "TOYOTA", 
+//     model: "GT-86", 
+//     price: 33000
+// });
+// console.log(gt);
+
+// const frs = new Car({
+//     brand: "SCION", 
+//     model: "FR-S", 
+//     price: 17000
+// });
+// console.log(frs);
+
+// ================================================================================================================================================================================
+
+// class Car {
+//     static maxPrice = 50000;
+//     #price;
+  
+//     constructor(params) {
+//       this.#price = params.price;
+//     }
+  
+//     get price() {
+//       return this.#price;
+//     }
+  
+//     set price(newPrice) {
+//         if (newPrice <= Car.maxPrice) {
+//             this.#price = newPrice;
+//         }
+      
+//     }
+//   }
+  
+//   const audi = new Car({ price: 35000 });
+//   console.log(audi.price);
+  
+//   audi.price = 49000;
+//   console.log(audi.price);
+  
+//   audi.price = 51000;
+//   console.log(audi.price);
+
+// ================================================================================================================================================================================
+
+// class Car {
+//     static #maxPrice = 50000;
+//     static checkPrice(price){
+//         if (price < Car.#maxPrice) {
+//             return "Success! Price is within acceptable limits";
+//         } else {
+//             return "Error! Price exceeds the maximum";
+//         }
+//     };
+  
+//     constructor(params) {
+//       this.price = params.price;
+//     }
+//   }
+  
+//   const audi = new Car({ price: 36000 });
+//   const bmw = new Car({ price: 64000 });
+  
+//   console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+//   console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// ================================================================================================================================================================================
+
+// class User {
+
+//     constructor(email) {
+//       this.email = email;
+//     }
+  
+//     get email() {
+//       return this.email;
+//     }
+  
+//     set email(newEmail) {
+//       this.email = newEmail;
+//     }
+// }
+
+// class Admin extends User {
+
+//     static role = {
+//         BASIC: "basic", 
+//         SUPERUSER: "superuser"
+//     }
+// }
+
+// console.log(Admin.role.BASIC);
+// console.log(Admin.role.SUPERUSER);
+
+// ================================================================================================================================================================================
+
+// class User {
+//     email;
+  
+//     constructor(email) {
+//       this.email = email;
+//     }
+  
+//     get email() {
+//       return this.email;
+//     }
+  
+//     set email(newEmail) {
+//       this.email = newEmail;
+//     }
+//   }
+  
+//   class Admin extends User {
+//     access;
+//     static role = {
+//       BASIC: "basic",
+//       SUPERUSER: "superuser",
+//     };
+//     constructor(params) {
+//         super(params.email)
+//         this.access = params.access;
+
+//     }
+//   }
+  
+//   const mango = new Admin({
+//     email: "mango@mail.com",
+//     access: Admin.role.SUPERUSER,
+//   });
+  
+//   console.log(mango.email); // "mango@mail.com"
+//   console.log(mango.access); // "superuser"
+
+// ================================================================================================================================================================================
+
+class User {
+    email;
+  
+    constructor(email) {
+      this.email = email;
+    }
+  
+    get email() {
+      return this.email;
+    }
+  
+    set email(newEmail) {
+      this.email = newEmail;
+    }
+}
+
+class Admin extends User {
+    blacklistedEmails = [];
+
+    static role = {
+      BASIC: "basic",
+      SUPERUSER: "superuser",
+    };
+  
+    constructor(params) {
+      super(params.email);
+      this.access = params.access;
+    }
+
+    blacklist(email){
+        return this.blacklistedEmails.push(email);
+    }
+    
+    isBlacklisted(email){
+        return this.blacklistedEmails.includes(email)
+    }
+}
+  
+const mango = new Admin({
+    email: "mango@mail.com",
+    access: Admin.role.SUPERUSER,
+});
+  
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.access); // "superuser"
+  
+mango.blacklist("poly@mail.com");
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted("mango@mail.com")); // false
+console.log(mango.isBlacklisted("poly@mail.com")); // true
+  
